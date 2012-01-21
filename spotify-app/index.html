@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="sp://import/css/adam.css" />
+	<link rel="stylesheet" href="sp://import/css/api.css" />
+	<script src="jquery-1.7.1.js"></script>
+</head>
+<body>
+
+	<div style="width:200px;height:200px;background-color:#cfc;color:#000" id="gooddrop">
+		drop your good playlist here
+	</div>
+	
+	<input type="text" id="goodplaylist" value="spotify:user:wowbagger:playlist:4ehOsQATj5QyTBZeZ3kgWq"></input>
+
+	<hr/>
+
+	<div style="width:200px;height:200px;background-color:#fc8;color:#000" id="baddrop">
+		drop your horrible playlist here
+	</div>
+	
+	<input type="text" id="badplaylist" value="spotify:user:wowbagger:playlist:4ZBEE7b1WptI7e5ANbuWrG"></input>
+
+	<hr/>
+
+	<a id="startbutton">START</a> &nbsp;
+	
+	<a id="stopbutton">STOP</a><br/>
+	
+	<hr/>
+	
+	<a id="skipbutton">SKIP</a> &nbsp;
+	
+	<a id="vote1">VOTE 1</a>
+	
+	<a id="vote2">VOTE 2</a>
+	
+	<a id="votenone">VOTE NOoOooTHING</a><br/>
+	
+	Current time: <input type="text" size="3" id="time" value="40"></input>
+	of <input type="text" id="time2" size="3" value="60"></input> &nbsp;
+	<a id="reporttime">REPORT TIME</a>
+
+	</div>
+
+	<hr/>
+
+	<div id="root"></div>
+
+	<script>
+	var sp = getSpotifyApi(1);
+	var test = sp.require('test');
+	test.init();
+	</script>
+	
+</body>
+</html>
